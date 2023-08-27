@@ -1,6 +1,7 @@
 <template>
   <div class="docs">
     <h1>首页</h1>
+    <p>参数 = {{$route.name}}</p>
     <p>{{count}}</p>
     <button v-on:click="addItem">+</button>
     <button v-on="evnets" >-</button>
@@ -8,6 +9,25 @@
     {{val1}}
     <input type="text" :value="val1" v-on:input="handleChange">
     <p v-color="color">这是自定义指令</p>
+
+    <hello-test1 :initialCount="3" @increment="handleIncrement" @click.native="addItem"></hello-test1>
+
+    <hello-test2>
+      <template v-slot:right>
+        <h1>
+          rightrightright
+        </h1>
+      </template>
+
+      <p>hello = middle</p>
+
+      <template v-slot:left>
+        <h1>
+          <div>son - left</div>
+        </h1>
+      </template>
+      
+    </hello-test2>
   </div>
 </template>
 <script>
@@ -33,6 +53,9 @@ export default {
     },
     handleChange(e){
         this.val1 = e.target.value;
+    },
+    handleIncrement(newCount) {
+      console.log(`New count: ${newCount}`);
     }
   },
 };

@@ -22,3 +22,11 @@ pnpm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+```
+调用父组件的方法
+<hello-test1  @click.native="addItem"></hello-test1>
+
+minins
+```

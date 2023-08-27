@@ -8,6 +8,8 @@ import router from "./router/index";
 import store from "./store";
 import "./utils/request";
 
+import './main.component'
+
 Vue.config.productionTip = false;
 
 Vue.use(Antd);
@@ -38,16 +40,16 @@ Vue.directive("color", {
 });
 
 
-Vue.extend({
-  props: ['title', 'content'],
-  template: `
-    <div class="modal">
-      <div class="modal-header">{{ title }}</div>
-      <div class="modal-content">{{ content }}</div>
-      <button @click="$emit('close')">Close</button>
-    </div>
-  `
-});
+// Vue.extend({
+//   props: ['title', 'content'],
+//   template: `
+//     <div class="modal">
+//       <div class="modal-header">{{ title }}</div>
+//       <div class="modal-content">{{ content }}</div>
+//       <button @click="$emit('close')">Close</button>
+//     </div>
+//   `
+// });
 
 new Vue({
   render: (h) => h(App),
