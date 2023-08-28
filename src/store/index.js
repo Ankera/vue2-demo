@@ -9,7 +9,7 @@ const files = require.context("./modules", false, /\.js$/);
 files.keys().forEach((key) => {
   const store = files(key).default;
   const moduleName = key.replace(/^\.\//, "").replace(/\.js$/, "");
-  const modules = rootModule.modules = (rootModule.modules|| {});
+  const modules = (rootModule.modules = rootModule.modules || {});
   modules[moduleName] = store;
   modules[moduleName].namespaced = true;
 });

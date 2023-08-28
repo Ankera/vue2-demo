@@ -1,6 +1,14 @@
 <template>
   <div class="docs">
     <h1>首页</h1>
+    <count-num></count-num>
+
+    <hr>
+    <ul>
+      <router-link to="/">首页</router-link> |
+      <router-link to="/hello">HELLO</router-link> | 
+      <router-link to="/hello-hi">Hi1</router-link>
+    </ul>
     <p>参数 = {{$route.name}}</p>
     <p>{{count}}</p>
     <button v-on:click="addItem">+</button>
@@ -31,8 +39,13 @@
   </div>
 </template>
 <script>
+import CountNum from '../components/CountNum.vue'
+
 export default {
   name: "HomeVue",
+  components: {
+    "count-num": CountNum
+  },
   data() {
     return {
       count: 1,

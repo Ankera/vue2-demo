@@ -5,7 +5,8 @@ import "element-ui/lib/theme-chalk/index.css";
 import "ant-design-vue/dist/antd.css";
 import App from "./App.vue";
 import router from "./router/index";
-import store from "./store";
+// import store from "./store";
+import store from './store'
 import "./utils/request";
 
 import './main.component'

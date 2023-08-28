@@ -2,6 +2,7 @@ export default [
     {
         path: '/',
         name: "home",
+        // alias: '/home1',
         component: () => import(/*webpackChunkName:'home'*/"../views/Home.vue")
     },
     {

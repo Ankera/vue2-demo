@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{msg}}
+    {{ msg }}
   </div>
 </template>
 
@@ -8,8 +8,16 @@
 export default {
   data() {
     return {
-      msg: "hello hi 111",
+      msg: "router-view left hello hi 111",
     };
+  },
+  beforeRouteEnter(to, from, next) {
+    console.log(to, from, next);
+    next()
+  },
+  beforeRouteLeave(to, from, next) {
+    console.log(to, from, next);
+    next();
   },
 };
 </script>

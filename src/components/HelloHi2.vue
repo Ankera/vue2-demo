@@ -8,7 +8,7 @@
 export default {
   data() {
     return {
-      msg: "hello hi 222 ",
+      msg: "router-view right hello hi 222 ",
     };
   },
 };

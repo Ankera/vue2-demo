@@ -16,5 +16,16 @@ export default [
       left: HelloHi1,
       right: HelloHi2,
     },
+    beforeEnter: (to, from, next) => {
+      // ...
+      console.log('to===', to, from)
+
+      next();
+    }
   },
+  {
+    path: "/hello-hi",
+    component: HelloHi1,
+    // alias: "/hello-hi22"
+  }
 ];
